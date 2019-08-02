@@ -35,7 +35,7 @@ if (typeof navigator !== 'undefined') {
 const DEFAULT_PICA_OPTS = {
   tile: 1024,
   concurrency,
-  features: [ 'js', 'wasm', 'ww' ],
+  features: [ 'js', 'ww' ],
   idle: 2000
 };
 
@@ -140,7 +140,7 @@ Pica.prototype.init = function () {
   let features = this.options.features.slice();
 
   if (features.indexOf('all') >= 0) {
-    features = [ 'cib', 'wasm', 'js', 'ww' ];
+    features = [ 'cib', 'js', 'ww' ];
   }
 
   this.__requested_features = features;
